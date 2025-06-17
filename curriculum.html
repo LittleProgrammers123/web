@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo LITTLE PROGRAMMERS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="image/logo2.png" alt="Logo Little Programmers" class="logo">
+            </div>
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="nosotros.html">Nuestro Equipo</a>
+                <a href="curriculum.html">Currículo</a>
+                <a href="contacto.html">Contáctanos</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="cadenas" class="card">
+            <div class="image-container">
+                <img src="image/logo.jpg" 
+                     alt="Programación" 
+                     class="animated-image" 
+                     id="mainImage">
+            </div>
+            <h1>LITTLE PROGRAMMERS 🚀</h1>
+        </section>
+
+        <section class="downloads-section">
+            <h1>📥Temas del Currículo del Modulo 3: Programación y bases de datos</h1>
+            
+            <div class="downloads-grid">
+                <!-- Item 1 -->
+                <div class="download-card">
+                    <div class="download-header">
+                        <ion-icon name="document-text-outline" class="download-icon"></ion-icon>
+                        <div class="file-info">
+                            <h3>Primero de Bachillerato</h3>
+                            <p class="file-details">PDF • 2.5 MB</p>
+                        </div>
+                    </div>
+                    <p class="file-description"></p>
+                    <div class="button-container">
+                        <button class="view-btn" data-pdf="downloads/primero.pdf">
+                            <ion-icon name="eye-outline"></ion-icon>
+                            Visualizar
+                        </button>
+                        <a href="downloads/primero.pdf" class="download-btn" download>
+                            <ion-icon name="download-outline"></ion-icon>
+                            Descargar
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="download-card">
+                    <div class="download-header">
+                        <ion-icon name="document-text-outline" class="download-icon"></ion-icon>
+                        <div class="file-info">
+                            <h3>Segundo de Bachillerato</h3>
+                            <p class="file-details">PDF • 3.1 MB</p>
+                        </div>
+                    </div>
+                    <p class="file-description"></p>
+                    <div class="button-container">
+                        <button class="view-btn" data-pdf="downloads/segundo.pdf">
+                            <ion-icon name="eye-outline"></ion-icon>
+                            Visualizar
+                        </button>
+                        <a href="downloads/segundo.pdf" class="download-btn" download>
+                            <ion-icon name="download-outline"></ion-icon>
+                            Descargar
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="download-card">
+                    <div class="download-header">
+                        <ion-icon name="document-text-outline" class="download-icon"></ion-icon>
+                        <div class="file-info">
+                            <h3>Tercero de Bachillerato</h3>
+                            <p class="file-details">PDF • 2.8 MB</p>
+                        </div>
+                    </div>
+                    <p class="file-description"></p>
+                    <div class="button-container">
+                        <button class="view-btn" data-pdf="downloads/tercero.pdf">
+                            <ion-icon name="eye-outline"></ion-icon>
+                            Visualizar
+                        </button>
+                        <a href="downloads/tercero.pdf" class="download-btn" download>
+                            <ion-icon name="download-outline"></ion-icon>
+                            Descargar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal para visualización de PDF -->
+        <div id="pdfModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <iframe id="pdfViewer" frameborder="0"></iframe>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>CopyRight 2025 Ecuador - Baños. Unidad Educativa "Baños"</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

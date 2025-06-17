@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenidos a LITTLE PROGRAMMERS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="image/logo2.png" alt="Logo Little Programmers" class="logo">
+            </div>
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="nosotros.html">Nuestro Equipo</a>
+                <a href="curriculum.html">Currículo</a>
+                <a href="contacto.html">Contáctanos</a>
+            </nav>
+        </div>
+       
+    </header>
+
+    <main>
+        <section id="cadenas" class="card">
+            <div class="image-container">
+                <img src="image/logo.jpg" 
+                     alt="Programación" 
+                     class="animated-image" 
+                     id="mainImage">
+            </div>
+            <h1>Bienvenidos a LITTLE PROGRAMMERS 🚀</h1>
+            <h2>Este espacio está dedicado al mundo de la programación y bases de datos, abordando los temas clave que se estudian en la carrera de informática. Nuestro enfoque principal es la programación, explorando desde los fundamentos y buenas prácticas.
+                ¡Acompáñanos en este viaje de aprendizaje y desarrollo!</h2>
+                      
+            <h1>COMPETENCIA GENERAL</h1> 
+            <h2>
+                Optimizar el tratamiento de la información mediante el procesamiento automático, 
+                utilizando lenguajes de programación, bases de datos, herramientas ofimáticas, redes 
+                informáticas, herramientas web, sistemas operativos y soporte técnico; proponiendo soluciones 
+                creativas e innovadoras que respondan a los requerimientos de los usuarios, 
+                aplicando procedimientos y metodologías informáticas vigentes.</h2>
+            
+           
+        </section>
+    </main>
+
+    <footer>
+        <p>CopyRight 2025 Ecuador- Baños. Unidad Eduactiva "Baños"</p>
+    </footer>
+
+    <script>
+        // Animación de la imagen central
+        const image = document.getElementById('mainImage');
+        let animationPaused = false;
+
+        image.addEventListener('mouseover', () => {
+            if(!animationPaused) {
+                image.style.animationPlayState = 'paused';
+            }
+        });
+
+        image.addEventListener('mouseout', () => {
+            if(!animationPaused) {
+                image.style.animationPlayState = 'running';
+            }
+        });
+
+        image.addEventListener('click', () => {
+            image.style.transform = 'scale(1.15) rotate(5deg)';
+            setTimeout(() => {
+                image.style.transform = 'scale(1) rotate(0deg)';
+            }, 500);
+            
+            // Efecto de partículas
+            const particles = document.createElement('div');
+            particles.style.position = 'absolute';
+            particles.style.width = '10px';
+            particles.style.height = '10px';
+            particles.style.background = 'radial-gradient(circle, var(--secondary-color), transparent)';
+            particles.style.borderRadius = '50%';
+            particles.style.animation = 'particle 1s ease-out';
+            
+            const rect = image.getBoundingClientRect();
+            particles.style.left = `${rect.left + rect.width/2}px`;
+            particles.style.top = `${rect.top + rect.height/2}px`;
+            
+            document.body.appendChild(particles);
+            
+            setTimeout(() => {
+                particles.remove();
+            }, 1000);
+            
+            animationPaused = !animationPaused;
+            image.style.animationPlayState = animationPaused ? 'paused' : 'running';
+        });
+
+        window.addEventListener('load', () => {
+            image.style.opacity = '1';
+            image.style.transform = 'translateY(0)';
+        });
+    </script>
+</body>
+</html>
